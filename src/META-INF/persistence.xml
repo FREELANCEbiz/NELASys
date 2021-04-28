@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="NELACoopSysPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>app.model.Coa</class>
+    <class>app.model.ShareHolder</class>
+    <class>app.view.user.User</class>
+    <class>app.model.Electrician</class>
+    <class>app.model.TransactionType</class>
+    <class>app.model.TransactionCharges</class>
+    <class>app.model.Transaction</class>
+    <class>app.model.TransactionDetails</class>
+    <class>app.model.PayrollPeriod</class>
+    <class>app.model.TransactionStatus</class>
+    <class>app.model.TransactionCancelled</class>
+    <class>app.model.TransactionLog</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/nela_db?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="nelauser"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="nelauser"/>
+    </properties>
+  </persistence-unit>
+</persistence>
